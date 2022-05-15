@@ -1,4 +1,6 @@
 package co.com.sofka.example.taller.values;
 
-public class MecánicoId {
+import co.com.sofka.domain.generic.Identity;
+
+public class MecánicoId extends Identity {
 }

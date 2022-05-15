@@ -1,4 +1,10 @@
 package co.com.sofka.example.taller.values;
 
-public class Ubicación {
+import co.com.sofka.domain.generic.ValueObject;
+
+public class Ubicación implements ValueObject<Integer> {
+    @Override
+    public Integer value() {
+        return null;
+    }
 }

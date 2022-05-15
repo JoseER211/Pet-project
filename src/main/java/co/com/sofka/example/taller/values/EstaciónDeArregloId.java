@@ -1,4 +1,6 @@
 package co.com.sofka.example.taller.values;
 
-public class EstaciónDeArregloId {
+import co.com.sofka.domain.generic.Identity;
+
+public class EstaciónDeArregloId extends Identity {
 }

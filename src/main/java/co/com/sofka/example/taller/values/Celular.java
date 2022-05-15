@@ -1,4 +1,10 @@
 package co.com.sofka.example.taller.values;
 
-public class Celular {
+import co.com.sofka.domain.generic.ValueObject;
+
+public class Celular implements ValueObject<Integer> {
+    @Override
+    public Integer value() {
+        return null;
+    }
 }

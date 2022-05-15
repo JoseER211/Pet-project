@@ -1,4 +1,6 @@
 package co.com.sofka.example.distribuidora.values;
 
-public class TransporteId {
+import co.com.sofka.domain.generic.Identity;
+
+public class TransporteId extends Identity {
 }

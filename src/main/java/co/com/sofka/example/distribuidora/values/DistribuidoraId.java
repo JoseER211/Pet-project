@@ -1,4 +1,6 @@
 package co.com.sofka.example.distribuidora.values;
 
-public class DistribuidoraId {
+import co.com.sofka.domain.generic.Identity;
+
+public class DistribuidoraId extends Identity {
 }
