@@ -1,12 +1,14 @@
 package co.com.sofka.example.vehículo;
 
 import co.com.sofka.domain.generic.AggregateEvent;
+import co.com.sofka.domain.generic.DomainEvent;
 import co.com.sofka.example.distribuidora.values.DistribuidoraId;
 import co.com.sofka.example.taller.events.TallerCreado;
 import co.com.sofka.example.taller.values.TallerId;
 import co.com.sofka.example.vehículo.events.*;
 import co.com.sofka.example.vehículo.values.*;
 
+import java.util.List;
 import java.util.Objects;
 
 
@@ -27,6 +29,17 @@ public class Vehículo extends AggregateEvent<VehículoId> {
         appendChange(new VehículoCreado(matrícula, marca, modelo, color, documento)).apply();
     }
 
+    private Vehículo(VehículoId entityId){
+        super(entityId);
+        subscribe(new VehículoChange(this));
+    }
+
+    public static Vehículo from(VehículoId vehículoId, List<DomainEvent> events){
+        var vehículo = new Vehículo(vehículoId);
+        events.forEach(vehículo::applyEvent);
+        return vehículo;
+    }
+
 
     public void actualizarDocumento(Documento documento){
         appendChange(new DocumentoActualizado(documento)).apply();
@@ -43,14 +56,48 @@ public class Vehículo extends AggregateEvent<VehículoId> {
 
     }
 
-    public void agregarTaller(TallerId tallerId, co.com.sofka.example.taller.values.Nombre nombre){
-        appendChange(new TallerAgregado(tallerId, nombre)).apply();
+    public void asociarTaller(TallerId tallerId){
+        appendChange(new TallerAsociado(tallerId)).apply();
     }
 
-    public void agregarDistribuidora(DistribuidoraId distribuidoraId, co.com.sofka.example.distribuidora.values.Nombre nombre){
-        appendChange(new DistribuidoraAgregada(distribuidoraId, nombre)).apply();
+    public void asociarDistribuidora(DistribuidoraId distribuidoraId){
+        appendChange(new DistribuidoraAsociada(distribuidoraId)).apply();
     }
 
 
+    public Matrícula getMatrícula() {
+        return matrícula;
+    }
 
+    public Marca getMarca() {
+        return marca;
+    }
+
+    public Modelo getModelo() {
+        return modelo;
+    }
+
+    public Color getColor() {
+        return color;
+    }
+
+    public Documento getDocumento() {
+        return documento;
+    }
+
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public Encargado getEncargado() {
+        return encargado;
+    }
+
+    public TallerId getTallerId() {
+        return tallerId;
+    }
+
+    public DistribuidoraId getDistribuidoraId() {
+        return distribuidoraId;
+    }
 }

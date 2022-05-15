@@ -28,5 +28,15 @@ public class Taller extends AggregateEvent<TallerId> {
         appendChange(new EstaciónDeArregloAgregada(entityId, arreglo, ubicación )).apply();
     }
 
+    public Set<Mecánico> getMecánicos() {
+        return mecánicos;
+    }
 
+    public Set<EstaciónDeArreglo> getEstaciónesDeArreglo() {
+        return estaciónesDeArreglo;
+    }
+
+    public Nombre getNombre() {
+        return nombre;
+    }
 }

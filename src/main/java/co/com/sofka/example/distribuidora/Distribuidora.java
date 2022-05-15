@@ -27,4 +27,16 @@ public class Distribuidora extends AggregateEvent<DistribuidoraId> {
         appendChange(new TransporteAgregado(entityId, vehículo, cargamento)).apply();
 
     }
+
+    public Set<Conductor> getConductors() {
+        return conductors;
+    }
+
+    public Set<Transporte> getTransportes() {
+        return transportes;
+    }
+
+    public Nombre getNombre() {
+        return nombre;
+    }
 }
