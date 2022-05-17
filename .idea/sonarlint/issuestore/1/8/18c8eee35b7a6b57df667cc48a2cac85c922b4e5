@@ -1,0 +1,6 @@
+
+m	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Áó±À8úÀ™ Œ0
+b	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(¡ô›ì
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¢¯éüÿÿÿÿ
+q	java:S116"URename this field "matrÃ­cula" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆÖ¥8‘õ Œ0
+j	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÇŞŒ¦8¡Ö¡ Œ0

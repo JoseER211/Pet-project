@@ -1,0 +1,6 @@
+
+m	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤Ùı8³¿ğÄŒ0
+g	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(¶¯Ïûÿÿÿÿ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(„ôË¸üÿÿÿÿ
+r	java:S116"VRename this field "vehÃ­culoId" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ã—º8ßğÄŒ0
+o	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“×—ßøÿÿÿÿ8½åğÄŒ0
