@@ -11,8 +11,8 @@ public class Encargado extends Entity<EncargadoId> {
     private Celular celular;
     private Horario horario;
 
-    public Encargado(EncargadoId entityId, Nombre nombre, Celular celular, Horario horario) {
-        super(entityId);
+    public Encargado(EncargadoId encargadoId, Nombre nombre, Celular celular, Horario horario) {
+        super(encargadoId);
         this.nombre = nombre;
         this.celular = celular;
         this.horario = horario;

@@ -24,13 +24,13 @@ public class Vehículo extends AggregateEvent<VehículoId> {
     protected TallerId tallerId;
     protected DistribuidoraId distribuidoraId;
 
-    public Vehículo(VehículoId entityId, Matrícula matrícula, Marca marca, Modelo modelo, Color color, Documento documento) {
-        super(entityId);
+    public Vehículo(VehículoId vehículoId, Matrícula matrícula, Marca marca, Modelo modelo, Color color, Documento documento) {
+        super(vehículoId);
         appendChange(new VehículoCreado(matrícula, marca, modelo, color, documento)).apply();
     }
 
-    private Vehículo(VehículoId entityId){
-        super(entityId);
+    private Vehículo(VehículoId vehículoId){
+        super(vehículoId);
         subscribe(new VehículoChange(this));
     }
 
@@ -46,13 +46,13 @@ public class Vehículo extends AggregateEvent<VehículoId> {
 
     }
 
-    public void agregarCliente(ClienteId entityId, Contrato contrato, Nombre nombre){
-        appendChange(new ClienteAgregado(entityId, contrato, nombre )).apply();
+    public void agregarCliente(ClienteId clienteId, Contrato contrato, Nombre nombre){
+        appendChange(new ClienteAgregado(clienteId, contrato, nombre )).apply();
 
     }
 
-    public void agregarEncargado(EncargadoId entityId, Nombre nombre, Celular celular, Horario horario){
-        appendChange(new EncargadoAgregado(entityId, nombre, celular, horario)).apply();
+    public void agregarEncargado(EncargadoId encargadoId, Nombre nombre, Celular celular, Horario horario){
+        appendChange(new EncargadoAgregado(encargadoId, nombre, celular, horario)).apply();
 
     }
 

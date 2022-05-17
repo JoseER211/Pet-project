@@ -9,8 +9,8 @@ public class Mecánico extends Entity<MecánicoId> {
     private Nombre nombre;
     private Celular celular;
 
-    public Mecánico(MecánicoId entityId, Nombre nombre, Celular celular) {
-        super(entityId);
+    public Mecánico(MecánicoId mecánicoId, Nombre nombre, Celular celular) {
+        super(mecánicoId);
         this.nombre = nombre;
         this.celular = celular;
     }

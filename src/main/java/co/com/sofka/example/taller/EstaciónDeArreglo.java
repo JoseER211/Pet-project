@@ -9,8 +9,8 @@ public class EstaciónDeArreglo extends Entity<EstaciónDeArregloId> {
     private Arreglo arreglo;
     private Ubicación ubicación;
 
-    public EstaciónDeArreglo(EstaciónDeArregloId entityId, Arreglo arreglo, Ubicación ubicación) {
-        super(entityId);
+    public EstaciónDeArreglo(EstaciónDeArregloId estaciónDeArregloId, Arreglo arreglo, Ubicación ubicación) {
+        super(estaciónDeArregloId);
         this.arreglo = arreglo;
         this.ubicación = ubicación;
     }

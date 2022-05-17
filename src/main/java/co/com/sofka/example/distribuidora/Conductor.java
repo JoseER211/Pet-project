@@ -10,8 +10,8 @@ public class Conductor extends Entity<ConductorId> {
     private Nombre nombre;
     private Celular celular;
 
-    public Conductor(ConductorId entityId, Nombre nombre, Celular celular) {
-        super(entityId);
+    public Conductor(ConductorId conductorId, Nombre nombre, Celular celular) {
+        super(conductorId);
         this.nombre = nombre;
         this.celular = celular;
     }

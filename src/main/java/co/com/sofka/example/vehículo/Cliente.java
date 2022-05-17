@@ -10,8 +10,8 @@ public class Cliente extends Entity<ClienteId> {
     private  Contrato contrato;
     private  Nombre nombre;
 
-    public Cliente(ClienteId entityId, Contrato contrato, Nombre nombre) {
-        super(entityId);
+    public Cliente(ClienteId clienteId, Contrato contrato, Nombre nombre) {
+        super(clienteId);
         this.contrato = contrato;
         this.nombre = nombre;
     }

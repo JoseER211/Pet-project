@@ -9,8 +9,8 @@ public class Transporte extends Entity<TransporteId> {
     private Vehículo vehículo;
     private Cargamento cargamento;
 
-    public Transporte(TransporteId entityId, Vehículo vehículo, Cargamento cargamento) {
-        super(entityId);
+    public Transporte(TransporteId transporteId, Vehículo vehículo, Cargamento cargamento) {
+        super(transporteId);
         this.vehículo = vehículo;
         this.cargamento = cargamento;
     }
